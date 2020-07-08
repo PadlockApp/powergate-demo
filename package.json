@@ -6,7 +6,7 @@
   "author": "scorpion9979",
   "license": "MIT",
   "scripts": {
-    "prestart": "cd node_modules/powergate/docker; docker-compose -f docker-compose.yaml -f ipfs-image.yaml -f powergate-image.yaml up -d --build && sleep 15",
+    "init": "cd node_modules/powergate/docker; docker-compose -f docker-compose.yaml -f ipfs-image.yaml -f powergate-image.yaml up -d --build",
     "start": "babel-node .",
     "stop": "cd node_modules/powergate/docker; docker stop $(docker ps -aq); docker rm $(docker ps -aq)"
   },
