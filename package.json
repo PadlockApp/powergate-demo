@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "init": "cd node_modules/powergate/docker; docker-compose -f docker-compose.yaml -f ipfs-image.yaml -f powergate-image.yaml up -d --build",
+    "prestart" : "rm -rf output",
     "start": "babel-node .",
-    "clean" : "rm -rf output",
     "stop": "cd node_modules/powergate/docker; docker stop $(docker ps -aq); docker rm $(docker ps -aq)"
   },
   "babel": {
